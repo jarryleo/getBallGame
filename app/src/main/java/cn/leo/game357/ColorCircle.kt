@@ -43,7 +43,7 @@ class ColorCircle : View {
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val spec = MeasureSpec.makeMeasureSpec(80, MeasureSpec.EXACTLY)
+        val spec = MeasureSpec.makeMeasureSpec((40*density).toInt(), MeasureSpec.EXACTLY)
         super.onMeasure(spec, spec)
     }
 
