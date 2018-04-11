@@ -12,7 +12,7 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         //assertEquals(4, 2 + 2)
-        val list = intArrayOf(3, 5, 1)
+        val list = intArrayOf(1, 5, 1)
         GameBrain().think(list)
         println(Arrays.toString(list))
     }

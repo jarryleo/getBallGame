@@ -38,15 +38,15 @@ class GameBrain {
      */
     private tailrec fun check(num: IntArray, a: Int, b: Int, c: Int, d: Int, e: Int, f: Int, g: Int): Boolean {
         if (g > 2) return false
-        if (num[a] * num[b] + num[a] + num[b] == d * e + d + e) {
+        if ((num[a] == d && num[b] == e) || (num[a] == e && num[b] == d)) {
             num[c] = f
             return true
         }
-        if (num[a] * num[c] + num[a] + num[c] == d * f + d + f) {
+        if ((num[a] == d && num[c] == f) || (num[a] == f && num[c] == d)) {
             num[b] = e
             return true
         }
-        if (num[b] * num[c] + num[b] + num[c] == e * f + e + f) {
+        if ((num[b] == e && num[c] == f) || (num[b] == f && num[c] == e)) {
             num[a] = d
             return true
         }
