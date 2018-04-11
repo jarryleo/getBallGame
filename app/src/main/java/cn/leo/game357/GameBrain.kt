@@ -33,7 +33,7 @@ class GameBrain {
         return flag
     }
 
-    private fun check(num: IntArray, a: Int, b: Int, c: Int, d: Int, e: Int, f: Int, g: Int): Boolean {
+    private tailrec fun check(num: IntArray, a: Int, b: Int, c: Int, d: Int, e: Int, f: Int, g: Int): Boolean {
         if (g > 2) return false
         if (num[a] == d && num[b] == e) {
             num[c] = f
