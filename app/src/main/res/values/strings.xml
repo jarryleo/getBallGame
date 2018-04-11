@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">取球游戏</string>
+    <string name="game_rule">游戏规则：
+        \n1、双方轮流取球
+        \n2、每次只能取一种颜色，但是可以取任意个数
+        \n3、当所有球只剩最后一个时候，谁取最后一个谁输
+        \n4、点击球一下取一个，可点击多次，可取完一行
+    </string>
+</resources>
