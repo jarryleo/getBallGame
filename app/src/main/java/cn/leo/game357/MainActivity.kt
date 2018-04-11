@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.LinearLayout
-import cn.leo.localnet.utils.ToastUtilK
+import cn.leo.localnet.utils.toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ColorCircle.OnColorClickListener, View.OnClickListener {
@@ -80,13 +80,13 @@ class MainActivity : AppCompatActivity(), ColorCircle.OnColorClickListener, View
         if (playerGet == index) {
             parent.removeViewAt(0)
         } else {
-            ToastUtilK.show(this, "每次只能取同一行的球")
+            toast("每次只能取同一行的球")
         }
     }
 
     override fun onClick(v: View?) {
         if (playerGet == 0) {
-            ToastUtilK.show(this, "玩家还没有取球")
+            toast("玩家还没有取球")
             return
         }
 
