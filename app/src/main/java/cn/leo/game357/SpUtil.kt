@@ -20,6 +20,7 @@ fun Context.put(key: String, value: Any) {
     edit.apply()
 }
 
+@Suppress("IMPLICIT_CAST_TO_ANY", "UNCHECKED_CAST")
 fun <T> Context.get(key: String, value: T): T {
     val sp = this.getSharedPreferences(sp_name, sp_mode)
     return when (value) {

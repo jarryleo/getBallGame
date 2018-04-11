@@ -33,17 +33,20 @@ class GameBrain {
         return flag
     }
 
+    /**
+     * 尾递归匹配
+     */
     private tailrec fun check(num: IntArray, a: Int, b: Int, c: Int, d: Int, e: Int, f: Int, g: Int): Boolean {
         if (g > 2) return false
-        if (num[a] == d && num[b] == e) {
+        if (num[a] * num[b] + num[a] + num[b] == d * e + d + e) {
             num[c] = f
             return true
         }
-        if (num[a] == d && num[c] == f) {
+        if (num[a] * num[c] + num[a] + num[c] == d * f + d + f) {
             num[b] = e
             return true
         }
-        if (num[b] == e && num[c] == f) {
+        if (num[b] * num[c] + num[b] + num[c] == e * f + e + f) {
             num[a] = d
             return true
         }
