@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.LinearLayout
+import cn.leo.clib.GameBrainLib
 import cn.leo.localnet.utils.toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -96,7 +97,8 @@ class MainActivity : AppCompatActivity(), ColorCircle.OnColorClickListener, View
         var c = ball3.childCount
         val ints = intArrayOf(a, b, c)
         //电脑思考
-        GameBrain().think(ints)
+        //GameBrain().think(ints)
+        GameBrainLib().computer(ints)
         playerGet = 0
         while (a > ints[0]) {
             ball1.removeViewAt(0)
